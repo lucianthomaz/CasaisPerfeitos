@@ -28,20 +28,20 @@ class Entrada:
     def getCartorios(self):
         return self.cartorios
 
-    def getPreferenciaHomem(self, index=0):      
+    def getPreferenciaHomem(self, index=-1):      
         self.prefHomens = []
-        if index == 0:            
+        if index == -1:
             for i in range(self.qtdeCasais):
                 self.prefHomens.append(self.entrada[i])            
             return self.prefHomens
         else:            
-            return self.entrada[index-1]
+            return self.entradaSemIndice[index]
 
-    def getPreferenciaMulher(self, index=0):
+    def getPreferenciaMulher(self, index=-1):
         self.prefMulheres = []
-        if index == 0:
+        if index == -1:
             for i in range(self.getqtdeCasais(), self.getqtdeCasais()*2):            
                 self.prefMulheres.append(self.entrada[i])
             return self.prefMulheres            
         else:            
-            return self.entradaSemIndice[index+self.getqtdeCasais()-1]
+            return self.entradaSemIndice[index+self.getqtdeCasais()]
