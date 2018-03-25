@@ -29,17 +29,6 @@ class Ambiente:
         for row in self.mulheres:
             row.getPreferencias()
 
-    def criarHomens(self):
-        self.homen1 = pessoa.Homem('Joao')
-        self.homen1.setPreferencias(self.entrada.getPreferenciaHomem(2))
-        self.homen1.getPreferencias()
-
-    def criarMulheres(self):
-        self.mulher1 = pessoa.Mulher('Maria')
-        self.mulher1.setPreferencias(self.entrada.getPreferenciaMulher(2))
-        self.mulher1.getPreferencias()
-
-
 class NomesHomens(Enum):
     Joao = 0
     Carlos = 1
